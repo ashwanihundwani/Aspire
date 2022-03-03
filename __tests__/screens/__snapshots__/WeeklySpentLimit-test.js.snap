@@ -1,0 +1,344 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#0C365A",
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#FFFFFF",
+        "fontFamily": "AvenirNext-Bold",
+        "fontSize": 24,
+        "marginLeft": 43.5,
+        "marginTop": 10,
+      }
+    }
+  >
+    Spending Limit
+  </Text>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderTopLeftRadius": 24,
+        "borderTopRightRadius": 24,
+        "flex": 1,
+        "height": 1204,
+        "marginTop": 60,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginLeft": 43.5,
+            "marginTop": 43.5,
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "process": [Function],
+            }
+          }
+          style={
+            Object {
+              "marginRight": 12,
+            }
+          }
+        />
+        <Text>
+          Set a weekly debit card spending limit
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginLeft": 43.5,
+            "marginTop": 10,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#01D167",
+              "borderRadius": 4,
+              "height": 22,
+              "marginTop": 5,
+              "width": 40,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#FFFFFF",
+                "fontFamily": "AvenirNext-Bold",
+                "fontSize": 12,
+                "marginTop": 4,
+                "textAlign": "center",
+              }
+            }
+          >
+            S$
+          </Text>
+        </View>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#FFFFFF",
+                "fontFamily": "AvenirNext-Bold",
+                "fontSize": 24,
+                "marginLeft": 10,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#222222",
+              },
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#DDDDDD",
+            "height": 0.7,
+            "marginLeft": 43.5,
+            "marginTop": 3,
+            "width": 663,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "color": "#22222266",
+            "fontFamily": "AvenirNext-Regular",
+            "fontSize": 13,
+            "marginLeft": 43.5,
+            "marginTop": 14,
+          }
+        }
+      >
+        Here weekly means the last 7 days - not the calendar week
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "marginLeft": 43.5,
+            "marginTop": 43.5,
+            "width": 663,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgba(1,209,103, 0.07)",
+                "borderRadius": 4,
+                "height": 40,
+                "justifyContent": "center",
+                "width": 206.25000000000003,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#01D167",
+                  "fontFamily": "AvenirNext-DemiBold",
+                  "fontSize": 12,
+                  "position": "absolute",
+                  "textAlign": "center",
+                }
+              }
+            >
+              S$ 5,000
+            </Text>
+          </View>
+        </View>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgba(1,209,103, 0.07)",
+                "borderRadius": 4,
+                "height": 40,
+                "justifyContent": "center",
+                "width": 206.25000000000003,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#01D167",
+                  "fontFamily": "AvenirNext-DemiBold",
+                  "fontSize": 12,
+                  "position": "absolute",
+                  "textAlign": "center",
+                }
+              }
+            >
+              S$ 10,000
+            </Text>
+          </View>
+        </View>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgba(1,209,103, 0.07)",
+                "borderRadius": 4,
+                "height": 40,
+                "justifyContent": "center",
+                "width": 206.25000000000003,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#01D167",
+                  "fontFamily": "AvenirNext-DemiBold",
+                  "fontSize": 12,
+                  "position": "absolute",
+                  "textAlign": "center",
+                }
+              }
+            >
+              S$ 20,000
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "justifyContent": "flex-end",
+          "marginBottom": 50,
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          Object {
+            "disabled": true,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "#EEEEEE",
+            "borderRadius": 101.25,
+            "height": 101.25,
+            "justifyContent": "center",
+            "opacity": 1,
+            "width": 547.5,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "fontFamily": "AvenirNext-DemiBold",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          Save
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

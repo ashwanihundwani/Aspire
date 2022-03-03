@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "marginBottom": 34,
+      "marginHorizontal": 43.5,
+      "opacity": 1,
+      "width": 663,
+    }
+  }
+  testID="1"
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+      }
+    }
+  >
+    <Image
+      source={Object {}}
+    />
+    <View
+      style={
+        Object {
+          "marginLeft": 12,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#25345F",
+            "fontFamily": "AvenirNext-Medium",
+            "fontSize": 14,
+            "marginTop": 4,
+            "width": 563,
+          }
+        }
+      >
+        Test
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#22222266",
+            "fontFamily": "AvenirNext-Regular",
+            "fontSize": 13,
+            "marginTop": 2,
+            "width": 563,
+          }
+        }
+      >
+        Test Description
+      </Text>
+    </View>
+  </View>
+  <RCTSwitch
+    accessibilityRole="switch"
+    onChange={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "height": 31,
+        "width": 51,
+      }
+    }
+    testID="1_Switch"
+    value={false}
+  />
+</View>
+`;

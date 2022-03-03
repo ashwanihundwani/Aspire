@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "marginLeft": 43.5,
+      "marginTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#01D167",
+        "borderRadius": 4,
+        "height": 22,
+        "marginTop": 5,
+        "width": 40,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "AvenirNext-Bold",
+          "fontSize": 12,
+          "marginTop": 4,
+          "textAlign": "center",
+        }
+      }
+    >
+      S$
+    </Text>
+  </View>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "AvenirNext-Bold",
+          "fontSize": 24,
+          "marginLeft": 10,
+          "textAlign": "center",
+        },
+        Object {},
+      ]
+    }
+  >
+    3,000
+  </Text>
+</View>
+`;
