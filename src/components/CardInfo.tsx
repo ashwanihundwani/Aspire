@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native'
+import { View, StyleSheet, Image, Text, TouchableOpacity, Platform } from 'react-native'
 import { AppColors, DebitCardString, layouting, testIDs } from '../utils/constants'
 import { windowWidth, avenirFont, FontStyle } from '../utils/utils'
 
@@ -120,17 +120,16 @@ const styles = StyleSheet.create({
         marginTop: spacingFactor
     },
     holderName: {
-        
         color: AppColors.whiteColor,
         marginLeft: spacingFactor,
-        marginTop: spacingFactor,
+        marginTop: Platform.OS === 'ios' ? spacingFactor : spacingFactor - 10,
         fontFamily: avenirFont(FontStyle.Bold),
         fontSize: 22
     },
     cardNumberContainer: {
         flexDirection:"row",
         marginLeft: spacingFactor,
-        marginTop: spacingFactor,
+        marginTop: Platform.OS === 'ios' ? spacingFactor : spacingFactor - 5,
     },
     cardNumber: {
         marginRight:spacingFactor,
@@ -142,11 +141,11 @@ const styles = StyleSheet.create({
     expiryCVVContainer: {
         flexDirection: "row",
         justifyContent: "flex-start",
+        marginTop: Platform.OS === 'ios' ? 15 : 8
     },
     expiry: {
         color: AppColors.whiteColor,
         marginLeft: spacingFactor,
-        marginTop: 15,
         fontFamily: avenirFont(FontStyle.DemiBold),
         fontSize: 13
     },
@@ -154,21 +153,18 @@ const styles = StyleSheet.create({
         fontSize: 13,
         color: AppColors.whiteColor,
         marginLeft: 32,
-        marginTop: 15,
         fontFamily: avenirFont(FontStyle.DemiBold),
     },
     cvvValue: {
         fontSize: 13,
         color: AppColors.whiteColor,
         marginLeft: 32,
-        marginTop: 15,
         fontFamily: avenirFont(FontStyle.DemiBold),
     },
     hiddenCVV: {
         fontSize: 13,
         color: AppColors.whiteColor,
         marginLeft: 32,
-        marginTop: 15,
         fontFamily: avenirFont(FontStyle.DemiBold),
     },
     visaLogo: {

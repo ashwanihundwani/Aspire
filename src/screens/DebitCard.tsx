@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { StyleSheet, Text, View, FlatList, Modal, Image, Animated } from 'react-native';
+import { StyleSheet, Text, View, FlatList, Modal, Image, Animated, Platform } from 'react-native';
 import { AppColors, DebitCardString, layouting, DebitCardOptions, CommonString, testIDs } from '../utils/constants';
 import CardInfo from '../components/CardInfo';
 import { avenirFont, FontStyle, windowHeight } from '../utils/utils';
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between"
   },
   headerTitle: {
-    marginTop: 20,
+    marginTop: Platform.OS === 'ios'? 20 : 16,
     fontFamily: avenirFont(FontStyle.Bold),
     fontSize: 24,
     color: AppColors.navigationTintColor,
@@ -176,27 +176,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginLeft: spacingFactor,
     marginTop: 10,
-  },
-  balanceLabelContainer: {
-    marginTop: 5,
-    borderRadius: 4,
-    width: 40,
-    height: 22,
-    backgroundColor: AppColors.lightGreen,
-  },
-  balanceLabel: {
-    color: AppColors.whiteColor,
-    fontFamily: avenirFont(FontStyle.Bold),
-    fontSize: 12,
-    textAlign: "center",
-    marginTop: 4
-  },
-  balanceValue: {
-    color: AppColors.whiteColor,
-    fontFamily: avenirFont(FontStyle.Bold),
-    fontSize: 24,
-    textAlign: "center",
-    marginLeft: 10,
   },
   optionsList: {
     position: "absolute",

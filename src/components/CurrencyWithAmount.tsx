@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Platform } from 'react-native'
 import { CommonString, AppColors, layouting } from '../utils/constants'
 import { avenirFont, FontStyle } from '../utils/utils'
 
@@ -23,22 +23,14 @@ const CurrencyWithAmount: React.FC<CurrencyWithAmountProps> = (props: CurrencyWi
 }
 
 const styles = StyleSheet.create({
-  balanceContainer: {
-    marginTop: spacingFactor
-  },
-  balance: {
-    fontSize: 14,
-    color: AppColors.whiteColor,
-    marginLeft: spacingFactor,
-    fontFamily: avenirFont(FontStyle.Medium),
-  },
+ 
   balanceContent: {
     flexDirection: "row",
     marginLeft: spacingFactor,
-    marginTop: 10,
+    marginTop: Platform.OS === 'ios' ?  10 : 0,
   },
   balanceLabelContainer: {
-    marginTop: 5,
+    marginTop: Platform.OS === 'ios' ? 5 : 10,
     borderRadius: 4,
     width: 40,
     height: 22,
@@ -49,14 +41,14 @@ const styles = StyleSheet.create({
     fontFamily: avenirFont(FontStyle.Bold),
     fontSize: 12,
     textAlign: "center",
-    marginTop: 4
+    marginTop: Platform.OS === 'ios' ? 4 : 0,
   },
   balanceValue: {
     color: AppColors.whiteColor,
     fontFamily: avenirFont(FontStyle.Bold),
     fontSize: 24,
     textAlign: "center",
-    marginLeft: 10,
+    marginLeft: 10, 
   }
 })
 
