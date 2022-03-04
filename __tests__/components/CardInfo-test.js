@@ -6,7 +6,7 @@ import 'react-native';
 import React from 'react';
 import CardInfo from '../../src/components/CardInfo';
 import renderer from 'react-test-renderer';
-import { render, fireEvent} from '@testing-library/react-native'
+import { render, fireEvent, cleanup} from '@testing-library/react-native'
 import { testIDs, DebitCardString } from '../../src/utils/constants';
 
 it('renders correctly', () => {
@@ -49,3 +49,6 @@ it("shows/hides cvv on show/hide button click", () => {
   getByText("5006")
   getByText("2020")
 })
+
+afterAll(cleanup)
+

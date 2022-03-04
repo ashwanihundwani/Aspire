@@ -14,37 +14,35 @@ Aspire app allows users to track their daily spend limits. Below are some of the
 
 ## Prerequisites
 
-- [Node](https://nodejs.org) v14.16 and NPM v7.7.5
-- [Yarn](https://yarnpkg.com/) v1.22.10
-- A development machine set up for React Native by following
+- [Node](https://nodejs.org) v16.13.2 and NPM v8.1.2
+- [Yarn](https://yarnpkg.com/) v1.22.17
+- Mac machone for React Native Development by following
   [these instructions](https://facebook.github.io/react-native/docs/getting-started.html)
 
 ## Getting Started
 
 1. Clone this repo,
-   `git clone https://github.com/manimaran-c/aspiretask`
-2. Go to project's root directory, `cd aspiretask`
+   `git clone https://github.com/ashwanihundwani/Aspire.git`
+2. Go to project's root directory, `cd Aspire`
 3. Run `yarn` to install dependencies
 4. Start the packager with `yarn start`
-5. Connect a mobile device to your development machine
-6. Run the test application:
+5. Use Emulator/Simulator or Android/iOS or Connect a mobile device to your development machine
+6. Run the test application.
 
 - On Android:
-  - Run `react-native run-android` or Use Android Studio (Recommended)
+  - Run `react-native run-android` or Use Android Studio
 - On iOS:
   - Open `ios/aspireapp.xcworkspace` in Xcode
-  - Hit `Run` after selecting the desired device
+  - Hit `Run` after selecting the simulator / desired device
 
 ## Development Points
 
-- Used [mockapi.io](https://6208a5be90422d00173aee9a.mockapi.io/getCardInfo) for API and it's not stable, sometimes you may face timeout issue.
-- In `debitcardReducer` given some default values due to unstable condition of mockapi
-- As `Avenir Next` font is not available for free, I used `Metropolis` font
-- I Used `React Native Paper` for Switch UI, so iOS and Android switches will be different as they are displayed in their native UI
+- Used [jsonplaceholder.typicode.com](https://my-json-server.typicode.com/ashwanihundwani/mockJSONServer/debitCard) for API.
+- Used `Avenir Next` font in both Android & iOS. In Android the text takes extra padding. Hence some adjustments are done using platform specific checks.
 
 ##### API Mock Response
 
-`{ "data": [ { "cardDetails": { "cardHolderName": "Jessie Kerluke", "cardNumber": "3056-9309-0259-0486", "cardValidity": "10/24", "cardCvv": "590" }, "balance": "5000", "amountSpend": "1000", "id": "1" } ] }`
+`{"debitCard": { "holderName": "Ashwani Hundwani","cardNumber": "5702-6007-4060-0198", "expiry": "12/22","cvv": "405", "balance": "3,000", "weeklySpendLimit": "5,000", "spentAmount": "5,000"}}`
 
 ## User Stories
 
@@ -79,10 +77,6 @@ Aspire app allows users to track their daily spend limits. Below are some of the
 - [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 - [React Navigation](https://reactnavigation.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 - [React Native Gesture Handler](https://github.com/kmagiera/react-native-gesture-handler) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-- [React Native Paper](https://callstack.github.io/react-native-paper/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-- [React Number Format](https://github.com/s-yadav/react-number-format) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-- [React Native SVG](https://github.com/react-native-svg/react-native-svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-- [RN Sliding Panel](https://octopitus.github.io/rn-sliding-up-panel/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 #### NETWORKING
 
@@ -90,8 +84,5 @@ Aspire app allows users to track their daily spend limits. Below are some of the
 
 #### STORAGE
 
-- [AsyncStorage](https://github.com/react-native-async-storage/async-storage) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 - [Redux](http://redux.js.org/) with [hooks](https://react-redux.js.org/api/hooks) support [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 - [Redux Saga](https://redux-saga.js.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-- [Redux Persist](https://github.com/rt2zz/redux-persist/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-- [Redux Logger](https://github.com/LogRocket/redux-logger) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
