@@ -3,23 +3,23 @@
 Aspire app allows users to view the debit card information & track their weekly spend limits.
 
 ### User Story - 1: "Debit Card" screen.
-- When a use launches th app. Tab bar at the bottom should be shown. It will have options (Home, Payment, Debit Card, Payments, Credit, Profile)
+- When user launches the app. Tab bar at the bottom should be shown. It should have options (Home, Payment, Debit Card, Payments, Credit, Profile)
 - By default, Debit Card Tab should be selected.
-- The user be able to see the Debit card information.
-- Header Section - The user should see the Debit Card title, Application logo & Available Balance.
-- Card Section - The user be able to see the Virtual Debit Card with information card holder name, cerd number, exiry & CVV.
-- On click of show/hide button, the card number's first 12 digits and expiry should be hidden using `.` & `*` respectively. Show button should change to hide button. This should for the alternate case on clicking button in hidden state the card should show the complete information and hide button should change to show button.
+- The user should see the Debit card information.
+- Header Section - The user should see the Debit Card title, application logo & available balance.
+- Card Section - The user should be able to see the Virtual Debit Card with information card holder name, card number, exiry & CVV.
+- On click of show/hide button, the card number's first 12 digits and expiry should be hidden using `.` & `*` characters respectively. Show button should change to hide button. This is applicable for the alternate case as well, on clicking button in hidden state the card should show the complete information and `hide button` should change to `show button`.
 - Spent Progress - If weekly spend limit is set, the User should see the spent vs weekly limit progress. The progress should be filled with green color & a UI spent (in green color) | weekly limit (light gray color) format should be shown on the right top. Example - `$5,000 | $10,000`.
 - Card Options - The user should see the card options (Top-up, Weekly spending limit, Free card, Get a new card & Deactivate cards)
 - If Weekly spent limit is not set, the user should be able to click on the Weekly spending limit row.
-- If Weekly spent limit is set, the user should not be able to click on the Weekly spending limit row. The should see the message - `Your weekly spending limit is S$ 5,000` (Example)
+- If Weekly spent limit is set, the user should not be able to click on the Weekly spending limit row. The user should see the message - `Your weekly spending limit is S$ 5,000` (Example)
 - If Weekly spent limit is set, user should be able to toggle the progress UI using the Switch button provided in the weekly spend limit row.
 
 ### User Story - 2: "Weekly spending limit" screen.
-- Upon click Weekly Spending Limit row in the Debit card screen, the should be shown Weekly Spending Limit screen with title `Spending Limit` & app logo.
-- User should see the 3 options `5,000`, `10,000` & `20,000` to set the weekly spending limit.
+- Upon click Weekly Spending Limit row in the Debit card screen, the user should be shown Weekly Spending Limit screen with title `Spending Limit` & app logo.
+- User should see the 3 options(buttons) `5,000`, `10,000` & `20,000` to set the weekly spending limit.
 - Intially, the Weekly Spending Limit label should show blank value & Save button should be grayed out and disabled.
-- On clicking any of the options the label above show the respected amount & Save button should be enabled and color should be changed to theme green.
+- On clicking any of the options(buttons) the label above show the respected amount & Save button should be enabled and Save button color should be changed to theme green.
 - User can any time go back to previous screen (Debit Card screen) by click `>` button on top left.
 - Upon clicking Save button, the Weekly Spending Limit should be saved and user should be taken back to the Debit Card screen.
 
