@@ -79,3 +79,9 @@ Aspire app allows users to view the debit card information & track their weekly 
 
 - [Redux](http://redux.js.org/) with [hooks](https://react-redux.js.org/api/hooks) support [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 - [Redux Saga](https://redux-saga.js.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+# Areas of imporvements
+
+- More extensive testing can be done using react-testing-library.
+- Linting tool like ESLint should be integration to catch code quality issues.
+
