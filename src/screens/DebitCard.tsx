@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { StyleSheet, Text, View, FlatList, Modal, Image, Animated, Platform } from 'react-native';
-import { AppColors, DebitCardString, layouting, DebitCardOptions, CommonString, testIDs } from '../utils/constants';
+import { AppColors, DebitCardString, layouting, DebitCardOptions, CommonString, testIDs, ErrorMessages } from '../utils/constants';
 import CardInfo from '../components/CardInfo';
 import { avenirFont, FontStyle, windowHeight } from '../utils/utils';
 import DebitCardOption, { CardOptionProps } from '../components/DebitCardOption';
@@ -31,10 +31,9 @@ const AvailableBalance: React.FC<AvailableBalanceProps> = (props: AvailableBalan
 const DebitCard = (props: any) => {
 
   const dispatch = useDispatch();
-  const debitCardResponse: DebitCardResponse = useSelector((state: any): DebitCardResponse => state.debitCardReducer.debitCard)
+  const debitCardResponse: any = useSelector((state: any): DebitCardResponse => state.debitCardReducer)
+  const { debitCard, debitCardError } = debitCardResponse
   const loading: boolean = useSelector((state: any): boolean => state.loadingReducer.isLoading)
-
-
   const scrollY = useRef(new Animated.Value(0)).current;
   const [debitCardOptions, setDebitCardOptions] = useState<CardOptionProps[]>([
     {
@@ -96,15 +95,22 @@ const DebitCard = (props: any) => {
       // Cleanup/unsuscribe from events
     }
   }, [])
+
+  useEffect(()=> {
+    if(debitCardError) {
+      alert(ErrorMessages.networkError)
+    }
+  },[debitCardError])
+
   return (
     <View style={{ flex: 1, backgroundColor: AppColors.navigationBackColor }}>
-      {debitCardResponse &&
+      {debitCardResponse && debitCard &&
         <>
           <View style={styles.logo}>
             <Text style={styles.headerTitle}>{DebitCardString.headerTitle}</Text>
             <Image style={{ marginRight: layouting.spacingFactor, marginTop: 0 }} source={Images.app.logo}></Image>
           </View>
-          <AvailableBalance balance={debitCardResponse.balance} />
+          <AvailableBalance balance={debitCard.balance} />
           <Animated.View style={[styles.bottomSheet, { transform: [{ translateY: headerTranslateY }] }]} />
           <Animated.FlatList testID="dddddd"
             onScroll={Animated.event(
@@ -118,12 +124,12 @@ const DebitCard = (props: any) => {
               <View style={styles.cardInfo}>
                 <CardInfo
                   showProgress={debitCardOptions[1].switchEnabled ? debitCardOptions[1].switchEnabled : false}
-                  holderName={debitCardResponse.holderName}
-                  cardNumber={debitCardResponse.cardNumber}
-                  expiry={debitCardResponse.expiry}
-                  CVV={debitCardResponse.cvv}
-                  weeklySpentLimit={debitCardResponse.weeklySpendLimit}
-                  amountSpent={debitCardResponse.spentAmount}
+                  holderName={debitCard.holderName}
+                  cardNumber={debitCard.cardNumber}
+                  expiry={debitCard.expiry}
+                  CVV={debitCard.cvv}
+                  weeklySpentLimit={debitCard.weeklySpendLimit}
+                  amountSpent={debitCard.spentAmount}
                 />
               </View>
             }

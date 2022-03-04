@@ -18,9 +18,10 @@ export function updateDebitCard(request: DebitCardRequest) {
   };
 }
 
-export function debitCardRequestFailed() {
+export function debitCardRequestFailed(failureResponse: any) {
   return {
     type: types.DEBIT_CARD_INFO_FAILURE,
+    failureResponse,
   };
 }
 

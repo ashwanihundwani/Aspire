@@ -15,13 +15,13 @@ export default function* requestDebitCardAsync(): Generator<any, any, any> {
   yield put(loadingActions.enableLoader());
 
   const response = yield call(fetchDebitCard);
-
+  
   if (response.data) {
     yield put(debitCardActions.debitCardResponse(response.data));
     yield put(loadingActions.disableLoader());
 
   } else {
-    yield put(debitCardActions.debitCardRequestFailed());
+    yield put(debitCardActions.debitCardRequestFailed(response));
     yield put(loadingActions.disableLoader());
   }
 }

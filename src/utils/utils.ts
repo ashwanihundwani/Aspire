@@ -21,6 +21,7 @@ export function windowHeight() {
     return Dimensions.get("window").height
 }
 
-export function parseNumberFromString(str: string) {
-    return parseInt(str.replace(/,/g, ''), 10);
+export function parseNumberFromString(str: string) : number {
+    
+    return str ? parseInt(str.replace(/,/g, ''), 10): 0
 }

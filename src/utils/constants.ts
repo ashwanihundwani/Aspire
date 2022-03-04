@@ -85,6 +85,11 @@ export const DebitCardOptions = {
     },
 }
 
+export const ErrorMessages = {
+    internetError:"Internet appears to be offline",
+    networkError:"Network Request Failed"
+}
+
 export const layouting = {
     // Standard margin calculation to accomodate various screen sizes accross devices.
     spacingFactor: 0.058 * windowWidth(),
