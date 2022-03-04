@@ -47,14 +47,15 @@ const DebitCard = (props: any) => {
       description: DebitCardOptions.Descriptions.weeklyspent,
       icon: Images.cardInfo.weeklySpent,
       showSwitch: true,
-      switchEnabled: true
+      switchOn: false,
+      switchEnabled: false
     },
     {
       title: DebitCardOptions.Titles.freezeCard,
       description: DebitCardOptions.Descriptions.freezeCard,
       icon: Images.cardInfo.freezeCard,
       showSwitch: true,
-      switchEnabled: false
+      switchOn: false
     },
     {
       title: DebitCardOptions.Titles.newCard,
@@ -73,12 +74,12 @@ const DebitCard = (props: any) => {
 
   const onSwitchValueChanged = (on: boolean, index: number) => {
     let tempOptions = [...debitCardOptions]
-    tempOptions[index].switchEnabled = on
+    tempOptions[index].switchOn = on
     setDebitCardOptions(tempOptions)
   }
 
   const onClick = (index: number) => {
-    if (index === 1) {
+    if (index === 1 && !debitCardOptions[index].switchOn) {
       props.navigation.navigate("WeeklySpendingLimit")
     }
   }
@@ -102,6 +103,18 @@ const DebitCard = (props: any) => {
     }
   },[debitCardError])
 
+  useEffect(()=> {
+    if(debitCard && debitCard.weeklySpendLimit.length > 0) {
+      let tempOptions = [...debitCardOptions]
+      tempOptions[1].switchOn = true
+      tempOptions[1].switchEnabled = true
+      tempOptions[1].description = DebitCardOptions.Descriptions.weeklySpendSaved + debitCard.weeklySpendLimit
+      setDebitCardOptions(tempOptions)
+    }
+  },[debitCard])
+
+  
+
   return (
     <View style={{ flex: 1, backgroundColor: AppColors.navigationBackColor }}>
       {debitCardResponse && debitCard &&
@@ -123,7 +136,7 @@ const DebitCard = (props: any) => {
             ListHeaderComponent={
               <View style={styles.cardInfo}>
                 <CardInfo
-                  showProgress={debitCardOptions[1].switchEnabled ? debitCardOptions[1].switchEnabled : false}
+                  showProgress={debitCardOptions[1].switchOn ? debitCardOptions[1].switchOn : false}
                   holderName={debitCard.holderName}
                   cardNumber={debitCard.cardNumber}
                   expiry={debitCard.expiry}
@@ -135,13 +148,14 @@ const DebitCard = (props: any) => {
             }
             data={debitCardOptions}
             renderItem={({ item, index }) => {
-              const { title, description, icon, showSwitch, switchEnabled } = item
+              const { title, description, icon, showSwitch, switchOn, switchEnabled } = item
               return <DebitCardOption
                 title={title}
                 description={description}
                 icon={icon}
                 showSwitch={showSwitch}
                 switchEnabled={switchEnabled}
+                switchOn={switchOn}
                 index={index}
                 onSwitchValueChanged={onSwitchValueChanged}
                 onClick={onClick}

@@ -6,11 +6,8 @@ import 'react-native';
 import React from 'react';
 import DebitCard from '../../src/screens/DebitCard';
 import renderer from 'react-test-renderer';
-
-import { Provider, useStore } from 'react-redux';
-import reducers from '../../src/store/reducers'
-import {cleanup,render,  fireEvent,} from '@testing-library/react-native'
-import { testIDs, CommonString } from '../../src/utils/constants';
+import { Provider } from 'react-redux';
+import store from '../../src/store'
 
 it('renders correctly', () => {
     const tree = renderer
@@ -19,4 +16,5 @@ it('renders correctly', () => {
     expect(tree).toMatchSnapshot();
 });
 
-afterEach(cleanup)
+
+

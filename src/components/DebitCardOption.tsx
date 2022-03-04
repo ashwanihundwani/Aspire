@@ -13,7 +13,8 @@ export interface CardOptionProps {
     description: string,
     icon: any,
     showSwitch: boolean,
-    switchEnabled?: boolean,
+    switchOn?: boolean,
+    switchEnabled? : boolean
 }
 
 export interface CardOptionDisplayProps extends CardOptionProps {
@@ -40,9 +41,9 @@ const DebitCardOption: React.FC<CardOptionDisplayProps> = (props: CardOptionDisp
                     <Text style={styles.description}>{props.description}</Text>
                 </View>
             </View>
-            {props.showSwitch ? <Switch testID={props.id + CommonString.switchSuffix} onValueChange={(value) => {
+            {props.showSwitch ? <Switch disabled={!props.switchEnabled} testID={props.id + CommonString.switchSuffix} onValueChange={(value) => {
                 props && props.onSwitchValueChanged && props.onSwitchValueChanged(value, props.index)
-            }} value={props.switchEnabled} /> : null}
+            }} value={props.switchOn} /> : null}
         </TouchableOpacity>
     )
 }

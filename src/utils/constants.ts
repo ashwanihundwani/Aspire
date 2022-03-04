@@ -79,6 +79,7 @@ export const DebitCardOptions = {
     Descriptions: {
         topup: "Deposit money to your account to use with card",
         weeklyspent: "You haven’t set any spending limit on card",
+        weeklySpendSaved: "You weekly spending limit is S$ ",
         freezeCard: "Your debit card is currently active",
         newCard: "This deactivates your current debit card",
         deactivated: "Your previously deactivated cards"
