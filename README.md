@@ -44,6 +44,9 @@ Aspire app allows users to track their daily spend limits. Below are some of the
 
 `{"debitCard": { "holderName": "Ashwani Hundwani","cardNumber": "5702-6007-4060-0198", "expiry": "12/22","cvv": "405", "balance": "3,000", "weeklySpendLimit": "5,000", "spentAmount": "5,000"}}`
 
+## Unit Testing
+- Run command "jest" or "jest -u" (to update snapshots) to run the unit tests.
+
 ## User Stories
 
 ### US-1: "Debit Card" page functionalities.
@@ -77,6 +80,8 @@ Aspire app allows users to track their daily spend limits. Below are some of the
 - [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 - [React Navigation](https://reactnavigation.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 - [React Native Gesture Handler](https://github.com/kmagiera/react-native-gesture-handler) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+- [React Testing Library](https://github.com/testing-library/react-testing-library) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+- [Jest Snapshot](https://jestjs.io/docs/snapshot-testing) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 #### NETWORKING
 
