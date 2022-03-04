@@ -1,14 +1,27 @@
 # Aspire
 
-Aspire app allows users to track their daily spend limits. Below are some of the features in this application:
-1. The app allows the user to see the Debit Card available balance & virtual card(Card Number, Expiry, CVV).
-2. The app provides the user with the option to show/hide the card number & CVV.
-3. User can see his spent vs available limit quota. The app shows a progress/fill UI for this.
-4. The app provides the user with the option to show/hide the spent vs available quota UI.
-5. The user can choose/update weekly spending limit. The app provides 3 options - S$ 5,000, S$ 10,000, S$ 20,000
-6. The app calculates the available spent limit upon choosing the new weekly spending limit, thereby giving user a view of his/her new spending limits.
+Aspire app allows users to view the debit card information & track their weekly spend limits.
 
-# Aspire Mobile Dev Challenge
+### User Story - 1: "Debit Card" screen.
+- When a use launches th app. Tab bar at the bottom should be shown. It will have options (Home, Payment, Debit Card, Payments, Credit, Profile)
+- By default, Debit Card Tab should be selected.
+- The user be able to see the Debit card information.
+- Header Section - The user should see the Debit Card title, Application logo & Available Balance.
+- Card Section - The user be able to see the Virtual Debit Card with information card holder name, cerd number, exiry & CVV.
+- On click of show/hide button, the card number's first 12 digits and expiry should be hidden using `.` & `*` respectively. Show button should change to hide button. This should for the alternate case on clicking button in hidden state the card should show the complete information and hide button should change to show button.
+- Spent Progress - If weekly spend limit is set, the User should see the spent vs weekly limit progress. The progress should be filled with green color & a UI spent (in green color) | weekly limit (light gray color) format should be shown on the right top. Example - `$5,000 | $10,000`.
+- Card Options - The user should see the card options (Top-up, Weekly spending limit, Free card, Get a new card & Deactivate cards)
+- If Weekly spent limit is not set, the user should be able to click on the Weekly spending limit row.
+- If Weekly spent limit is set, the user should not be able to click on the Weekly spending limit row. The should see the message - `Your weekly spending limit is S$ 5,000` (Example)
+- If Weekly spent limit is set, user should be able to toggle the progress UI using the Switch button provided in the weekly spend limit row.
+
+### User Story - 2: "Weekly spending limit" screen.
+- Upon click Weekly Spending Limit row in the Debit card screen, the should be shown Weekly Spending Limit screen with title `Spending Limit` & app logo.
+- User should see the 3 options `5,000`, `10,000` & `20,000` to set the weekly spending limit.
+- Intially, the Weekly Spending Limit label should show blank value & Save button should be grayed out and disabled.
+- On clicking any of the options the label above show the respected amount & Save button should be enabled and color should be changed to theme green.
+- User can any time go back to previous screen (Debit Card screen) by click `>` button on top left.
+- Upon clicking Save button, the Weekly Spending Limit should be saved and user should be taken back to the Debit Card screen.
 
 [![React Native](https://img.shields.io/badge/React%20Native-v0.67.2-green.svg)](https://facebook.github.io/react-native/) [![React Navigation V5](https://img.shields.io/badge/React%20Navigation-v6.0-blue.svg)](https://reactnavigation.org/)
 
@@ -16,7 +29,7 @@ Aspire app allows users to track their daily spend limits. Below are some of the
 
 - [Node](https://nodejs.org) v16.13.2 and NPM v8.1.2
 - [Yarn](https://yarnpkg.com/) v1.22.17
-- Mac machone for React Native Development by following
+- Mac machine for React Native Development by following
   [these instructions](https://facebook.github.io/react-native/docs/getting-started.html)
 
 ## Getting Started
@@ -48,31 +61,6 @@ Aspire app allows users to track their daily spend limits. Below are some of the
 - Run command "jest" or "jest -u" (to update snapshots) to run the unit tests.
 
 ## User Stories
-
-### US-1: "Debit Card" page functionalities.
-
-- When a user clicks on the Debit Card icon at the bottom tab, the Debit Card details page should be displayed.
-- When a user clicks on Debit Card Details, should be displayed with the Available Balance, based on the API response
-- When a user clicks on Show card number, the card numbers & CVV should be visible and eye icon should be strikethrough also the text should be changed into "Hide card number".
-- When a user clicks on "Hide card number", the card numbers & CVV should be hidden and the strikethrough of the eye icon should be removed also the text should be back to "Show card number"
-- When user click on Weekly spending limit, should be redirected to the Spending limit page.
-- Based on the amount spent the Debit card spending limit progress bar should be coloured out in green colour. Also the spent amount should be displayed at the right top of the progress bar with the total spending limit amount. Ex: `S$ 345` | `S$ 5,000`.
-
-### US-2: Spending limit functionalities
-
-- When a user clicks on "Weekly spending limit" (the whole row should be clickable when it's in off status) "Spending limit" page should be displayed.
-- When a user clicks on any options from the default amounts (Ex: S$ 5000, S$ 10000, S$ 20000), should be populated in the "Set a weekly debit card spending limit" field.
-  When a user entered or selected the amount, "Save" button should be enabled (By default without any amount, it should be in disabled status).
-- When the user clicks on the "Save" button, should be redirected to the "Debit card" page and below changes should happen in the Debit Card page.
-- "Weekly spending limit" default text message should be changed into "Your weekly spending limit is `S$5000`" (the amount should be changed as per the entered or selected value).
-- The Weekly spending limit switch should be enabled with green colour.
-- Progress bar should be shown with the entered or selected amount.
-- When user switch off the "Weekly spending limit" in Debit card,
-  Progress bar with amount details should be removed.
-- "Weekly spending limit" default text should be changed into "You haven't set any spend limit on card".
-- When the user again clicks or enables the "Weekly spending limit", the already entered amount should be maintained in the "Spending Limit" amount field.
-- When a user enters the amount manually and then clicks on option amount, the entered value should be replaced by the selected option value (Ex: User entered `S$ 3000` and then clicked on `S$ 5000` from option, the amount should be replaced with `S$ 5000`).
-- When the user clicks on the back icon, it should be redirected to the "Debit Card" page.
 
 ## List of Dependencies used
 
