@@ -44,6 +44,9 @@ Aspire app allows users to track their daily spend limits. Below are some of the
 
 `{"debitCard": { "holderName": "Ashwani Hundwani","cardNumber": "5702-6007-4060-0198", "expiry": "12/22","cvv": "405", "balance": "3,000", "weeklySpendLimit": "5,000", "spentAmount": "5,000"}}`
 
+## Unit Testing
+= Run command "jest" or "jest -u" (to update snapshots) to run the unit tests.
+
 ## User Stories
 
 ### US-1: "Debit Card" page functionalities.
